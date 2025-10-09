@@ -1,11 +1,8 @@
-Plan:
-
-
-Tasks:
+Task Plan:
+- [ ] Local env setup with React
+    
 - [ ] React Project Setup
 - [ ] Import all assets (fonts, images) from drive
-- [ ] Local env setup with React 
-- [ ] m.murtaza.4942@westcliff.edu s.rai.0330@westcliff.edu Mushfiq Arefin Rashid 
 
 - [ ] Nav bar / header
 - [ ] Footer
