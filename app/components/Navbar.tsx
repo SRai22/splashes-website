@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <Link href="#" className="register-btn">
+            <Link href="/signin" className="register-btn">
               Register / Sign In
             </Link>
           </li>
