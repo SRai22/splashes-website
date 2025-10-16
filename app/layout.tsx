@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navigation from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Splashes Website",
@@ -13,9 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased"
-      >
+      <body className="antialiased">
+        <Navigation />
         {children}
       </body>
     </html>
