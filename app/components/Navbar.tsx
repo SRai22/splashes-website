@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "About", href: "#" },
+    { label: "About", href: "/about" },
     { label: "Swimming Lessons", href: "#" },
     { label: "Swim Programs", href: "#" },
     { label: "Adult Programs", href: "#" },

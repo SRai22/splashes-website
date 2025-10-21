@@ -1,0 +1,173 @@
+/* app/about/about.css */
+
+.section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+    color: #1a2e38;
+}
+
+.body-copy {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.985rem, 0.95rem + 0.2vw, 1.075rem);
+    line-height: 1.8;
+    color: #444;
+    margin-inline: auto;
+    max-width: 70ch;
+}
+
+.link-inline {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: underline;
+    color: #0b31f4;
+    /* guide blue */
+}
+
+.link-inline:hover {
+    opacity: 0.85;
+}
+
+/* HERO */
+.about-hero {
+    min-height: 42vh;
+    /* mobile */
+}
+
+@media (min-width: 577px) {
+    .about-hero {
+        min-height: 54vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-hero {
+        min-height: 62vh;
+    }
+}
+
+.about-hero__overlay {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.about-hero__title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+    font-size: clamp(2rem, 1.2rem + 3vw, 4rem);
+}
+
+/* Gradient “bands” behind sections */
+.section-band {
+    padding-block: clamp(2.25rem, 1.6rem + 2vw, 4rem);
+    text-align: center;
+}
+
+/* Headings styling for About page */
+.section-band--sunrise h2,
+.section-band--trophy h2 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 800;
+    /* makes it as bold */
+    font-size: 3rem;
+    letter-spacing: 0.5px;
+    color: #1a2e38;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-band--sunrise p,
+.section-band--trophy p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1a2e38;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Our Philosophy */
+.section-band--sunrise {
+    background-image: url("/Images/about-our-philosophy-bg.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #1a2e38;
+}
+
+/* We Do A Pretty Good Job */
+.section-band--trophy {
+    background-image: url("/Images/about-we-do-a-pretty-good-job-bg.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #1a2e38;
+}
+
+/* Awards */
+.award-img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 140px;
+    /* mobile default */
+    object-fit: contain;
+}
+
+@media (min-width: 640px) {
+    .award-img {
+        max-width: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .award-img {
+        max-width: 220px;
+    }
+}
+
+/* Force white background for Awards section */
+.section-band--awards {
+    background-color: #ffffff !important;
+    color: #1a2e38;
+}
+
+.section-band--awards img.award-img {
+    display: inline-block;
+    margin: 1rem;
+}
+
+/* Awards grid layout */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 800px;
+    /* keeps them tighter under the heading */
+    margin: 0 auto;
+}
+
+/* Make images scale */
+.awards-grid img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Awards logos: slightly smaller & fluid */
+.section-band--awards .award-img {
+    width: clamp(120px, 15vw, 180px);
+    height: auto;
+    object-fit: contain;
+}
