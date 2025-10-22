@@ -115,3 +115,54 @@
         width: min(1500px, 92vw);
     }
 }
+
+/* ROUTE SCOPING TO AVOID ABOUT.CSS COLLISIONS  -------------------- */
+.programs-page .section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 800;
+    letter-spacing: .2px;
+    font-size: clamp(1.4rem, 1rem + 2vw, 2.25rem);
+    color: #1a2e38;
+    margin: 0;
+}
+
+.programs-page .body-copy {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(.985rem, .95rem + .2vw, 1.075rem);
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 1.15rem 0;
+    max-width: none;
+    /* prevent accidental narrowing from other pages */
+}
+
+.programs-page .link-inline {
+    text-decoration: underline;
+    color: #0b31f4;
+}
+
+.programs-page .link-inline:hover {
+    opacity: .85;
+}
+
+.programs-page .content-wrap {
+    width: min(1500px, 92vw);
+    margin-inline: auto;
+    padding-bottom: clamp(2rem, 1.4rem + 2vw, 3rem);
+}
+
+.programs-page .locations-heading {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, .95rem + .3vw, 1.125rem);
+    color: #1a2e38;
+    margin: 1.25rem 0 .5rem 0;
+}
+
+.programs-page .locations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    gap: .35rem;
+}
