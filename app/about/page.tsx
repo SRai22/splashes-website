@@ -1,6 +1,7 @@
 // app/about/page.tsx
 import Image from "next/image";
 import "./about.css";
+import BrandFooter from "@/app/components/BrandFooter";
 
 const awards = [
     "/Images/awards/bay-area-parent-2019.jpeg",
@@ -93,6 +94,8 @@ export default function AboutPage() {
                     </ul>
                 </div>
             </section>
+        {/* Footer band */}
+        <BrandFooter />
         </main>
     );
 }

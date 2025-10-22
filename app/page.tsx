@@ -1,3 +1,5 @@
+import BrandFooter from '@/app/components/BrandFooter';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">

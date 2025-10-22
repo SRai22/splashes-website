@@ -14,7 +14,7 @@ const Navbar = () => {
     { label: "Swim Programs", href: "#" },
     { label: "Adult Programs", href: "#" },
     { label: "Locations", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
