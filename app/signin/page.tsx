@@ -7,7 +7,7 @@ export default function SignIn() {
       {/* Logo */}
       <div className="w-full flex justify-center pt-8 pb-6 md:pt-12 md:pb-8">
         <Image
-          src="/splash-wave.png"
+          src="/Images/splash-wave.png"
           alt="Splashes Logo"
           width={300}
           height={80}
@@ -21,7 +21,7 @@ export default function SignIn() {
         <div className="relative w-11/12 md:w-full md:max-w-2xl">
           {/* Mascot peeking from the left of the card */}
           <Image
-            src="/shark-full.png"
+            src="/Images/shark-full.png"
             alt="Splashes Mascot"
             width={260}
             height={260}
