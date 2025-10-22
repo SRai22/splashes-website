@@ -1,4 +1,5 @@
 // app/swimlessons/page.tsx  
+// author - Md Rakeen Murtaza, m.murtaza.4942@westcliff.edu
 import React from "react";
 import "./swimlessons.css";
 import Image from "next/image";

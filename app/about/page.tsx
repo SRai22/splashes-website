@@ -1,4 +1,5 @@
 // app/about/page.tsx
+// author - Md Rakeen Murtaza, m.murtaza.4942@westcliff.edu
 import Image from "next/image";
 import "./about.css";
 import BrandFooter from "@/app/components/BrandFooter";
