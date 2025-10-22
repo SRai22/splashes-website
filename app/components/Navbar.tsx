@@ -13,7 +13,7 @@ const Navbar = () => {
     { label: "About", href: "/about" },
     { label: "Swimming Lessons", href: "/swimlessons" },
     { label: "Swim Programs", href: "/swimprograms" },
-    { label: "Adult Programs", href: "#" },
+    { label: "Adult Programs", href: "/adultprograms" },
     { label: "Locations", href: "#" },
     { label: "Contact Us", href: "/contact" },
   ];
