@@ -1,0 +1,19 @@
+/* Wave mask only appears at >=1200px; keeps DOM tiny on mobile */
+.waveWrap {
+  position: absolute;
+  right: -6%;
+  bottom: -12%;
+  width: min(38vw, 520px);
+  height: auto;
+}
+.waveMask {
+  -webkit-mask-image: url("/Images/splash-wave.png");
+  mask-image: url("/Images/splash-wave.png");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+@media (max-width: 1199px) {
+  .waveWrap { display: none; }
+}
