@@ -12,7 +12,7 @@ const Navbar = () => {
   const menuItems = [
     { label: "About", href: "/about" },
     { label: "Swimming Lessons", href: "/swimlessons" },
-    { label: "Swim Programs", href: "#" },
+    { label: "Swim Programs", href: "/swimprograms" },
     { label: "Adult Programs", href: "#" },
     { label: "Locations", href: "#" },
     { label: "Contact Us", href: "/contact" },

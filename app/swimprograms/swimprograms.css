@@ -1,0 +1,117 @@
+/* app/swimprograms/swimprograms.css ---------------------------------- */
+
+/* ---------- Force light palette locally ---------- */
+
+.programs-page {
+    --background: #ffffff;
+    --foreground: #171717;
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100%;
+}
+
+/* ------------------------------ HERO -------------------------------- */
+
+.programs-hero {
+    position: relative;
+    /* anchor for absolute overlay */
+    min-height: 42vh;
+    /* < 577px */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 577px) {
+    .programs-hero {
+        min-height: 54vh;
+    }
+}
+
+/* 577–1199px */
+@media (min-width: 1200px) {
+    .programs-hero {
+        min-height: 62vh;
+    }
+}
+
+/* ≥1200px */
+
+/* Tailwind utility used in TSX: .text-shadow-lg ---------------------- */
+/* If not already defined globally, uncomment to ensure presence.      */
+/*
+.text-shadow-lg { text-shadow: 0 4px 16px rgba(0,0,0,.45), 0 2px 4px rgba(0,0,0,.35); }
+*/
+
+/* ---------------------------- TITLE BAND ---------------------------- */
+
+.title-band {
+    padding-block: clamp(1.4rem, 1rem + 1.6vw, 2.5rem);
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: clamp(1.4rem, 1rem + 2vw, 2.25rem);
+    color: #1a2e38;
+    margin: 0;
+}
+
+/* ---------------------------- CONTENT -------------------------------- */
+
+.content-wrap {
+    width: min(1200px, 92vw);
+    margin-inline: auto;
+    padding-bottom: clamp(2rem, 1.4rem + 2vw, 3rem);
+}
+
+.body-copy {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.985rem, 0.95rem + 0.2vw, 1.075rem);
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 1.15rem 0;
+}
+
+/* --------------------------- LOCATIONS ------------------------------- */
+
+.locations-heading {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    color: #1a2e38;
+    margin: 1.25rem 0 0.5rem 0;
+}
+
+.locations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.link-inline {
+    text-decoration: underline;
+    color: #0b31f4;
+}
+
+.link-inline:hover {
+    opacity: 0.85;
+}
+
+/* ---------------------- Desktop breathing room ---------------------- */
+
+@media (min-width: 992px) {
+    .content-wrap {
+        width: min(1360px, 90vw);
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-wrap {
+        width: min(1500px, 92vw);
+    }
+}
