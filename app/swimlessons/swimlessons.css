@@ -1,0 +1,245 @@
+/* app/swimlessons/swimlessons.css  --------------------------------------- */
+
+/* ------------------------------ HERO ----------------------------------- */
+
+.lessons-hero {
+    min-height: 42vh;
+    /* <576px height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.lessons-hero__overlay {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+
+.lessons-hero__title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+    font-size: clamp(2rem, 1.2rem + 3vw, 4rem);
+    margin: 0;
+}
+
+/* 577–1199px */
+
+@media (min-width: 577px) {
+    .lessons-hero {
+        min-height: 54vh;
+    }
+}
+
+/* ≥1200px */
+
+@media (min-width: 1200px) {
+    .lessons-hero {
+        min-height: 62vh;
+    }
+}
+
+/* ---------------------------- TITLE BAND ------------------------------- */
+
+.title-band {
+    padding-block: clamp(1.75rem, 1.1rem + 2vw, 3rem);
+    text-align: center;
+}
+
+/* shared section title look aligned with About */
+.section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+    color: #1a2e38;
+    margin: 0;
+}
+
+/* ---------------------------- CONTENT ---------------------------------- */
+
+.content-wrap {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+    padding-bottom: clamp(2rem, 1.4rem + 2vw, 3rem);
+}
+
+
+.lesson-heading {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+    color: #1a2e38;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.body-copy {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.985rem, 0.95rem + 0.2vw, 1.075rem);
+    line-height: 1.8;
+    color: #444;
+    max-width: 70ch;
+    margin-inline: 0;
+}
+
+/* keep a little vertical space before 'Learn more here!' lines */
+
+.link-row {
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+}
+
+
+.link-inline {
+    text-decoration: underline;
+    color: #0b31f4;
+}
+
+
+.link-inline:hover {
+    opacity: 0.85;
+}
+
+/* --------------------------- SPACING TWEAKS ---------------------------- */
+/* tighten mobile spacing <576px  */
+@media (max-width: 576px) {
+    .content-wrap {
+        width: 92%;
+    }
+
+    .lesson-heading {
+        margin-top: 1rem;
+    }
+}
+
+/* relaxed spacing for ≥1200px desktop */
+@media (min-width: 1200px) {
+    .content-wrap {
+        width: min(1180px, 84%);
+    }
+}
+
+/* Force light page regardless of system dark mode */
+
+.lessons-page {
+    --background: #ffffff;
+
+    --foreground: #171717;
+
+    background: var(--background);
+
+    color: var(--foreground);
+
+    min-height: 100%;
+    /* ensure it covers viewport */
+}
+
+/* Keep links blue on light bg (safety if inherited) */
+
+.lessons-page .link-inline {
+    color: #0b31f4;
+}
+
+/* Widen text a bit more */
+
+@media (min-width: 992px) {
+    .content-wrap {
+        width: min(1360px, 90vw);
+    }
+
+
+    .body-copy {
+        max-width: 100ch;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .content-wrap {
+        width: min(1500px, 92vw);
+    }
+
+    /* breathe more on big screens */
+    .body-copy {
+        max-width: none;
+    }
+
+    /* let the container control width */
+}
+
+/* tighten vertical rhythm a touch at desktop */
+
+@media (min-width: 1200px) {
+    .lesson-heading {
+        margin-top: 1.1rem;
+    }
+
+    .link-row {
+        margin-bottom: 1.1rem;
+    }
+}
+
+/* Bug fix - ROUTE SCOPING TO BEAT ABOUT.CSS COLLISIONS ---------------------- */
+
+.lessons-page .section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+    color: #1a2e38;
+    margin: 0;
+}
+
+.lessons-page .lesson-heading {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+    color: #1a2e38;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.lessons-page .body-copy {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.985rem, 0.95rem + 0.2vw, 1.075rem);
+    line-height: 1.8;
+    color: #444;
+    max-width: none;
+    /* avoid re-narrowing from about.css */
+}
+
+.lessons-page .link-inline {
+    text-decoration: underline;
+    color: #0b31f4;
+}
+
+.lessons-page .link-inline:hover {
+    opacity: 0.85;
+}
+
+.lessons-page .content-wrap {
+    width: min(1500px, 92vw);
+    margin-inline: auto;
+    padding-bottom: clamp(2rem, 1.4rem + 2vw, 3rem);
+}
+
+/* keep our desktop widening under the same scope */
+@media (min-width: 992px) {
+    .lessons-page .content-wrap {
+        width: min(1500px, 92vw);
+    }
+
+    .lessons-page .body-copy {
+        max-width: none;
+    }
+}

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "About", href: "/about" },
-    { label: "Swimming Lessons", href: "#" },
+    { label: "Swimming Lessons", href: "/swimlessons" },
     { label: "Swim Programs", href: "#" },
     { label: "Adult Programs", href: "#" },
     { label: "Locations", href: "#" },

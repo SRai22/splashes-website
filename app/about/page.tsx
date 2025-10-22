@@ -19,8 +19,8 @@ export default function AboutPage() {
                     className="object-cover"
                     sizes="100vw"
                 />
-                <div className="about-hero__overlay">
-                    <h1 className="about-hero__title">About Splashes</h1>
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <h1 className="text-white text-shadow-lg font-display font-bold text-3xl md:text-5xl lg:text-6xl text-center">About Splashes</h1>
                 </div>
             </section>
 
@@ -56,8 +56,8 @@ export default function AboutPage() {
 
             {/* Awards We've Won */}
             <Awards />
-        {/* Footer band */}
-        <BrandFooter />
+            {/* Footer band */}
+            <BrandFooter />
         </main>
     );
 }
