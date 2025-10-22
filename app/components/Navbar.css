@@ -1,123 +1,229 @@
 .navbar {
-    background-color: #1d3b53;
-    color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 50;
+  background-color: #1d3b53;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 50;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo & Brand */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: serif;
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-menu a:hover {
+  color: #93c5fd;
+}
+
+/* Locations mega-dropdown */
+.nav-item-locations {
+  position: relative;
+}
+
+.locations-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.locations-menu {
+  position: absolute;
+  top: 110%;
+  right: 50%;
+  min-width: 680px;
+  background: white;
+  color: #1d3b53;
+  padding: 1.25rem;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* grid for columns inside dropdown */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem 2rem;
+}
+
+.locations-col h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #1d3b53;
+}
+
+.locations-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.locations-col li a {
+  color: #0ea5e9;
+  text-decoration: none;
+  display: block;
+  padding: 0.125rem 0;
+  font-size: 0.85rem;
+}
+
+.locations-col li a:hover {
+  text-decoration: underline;
+}
+
+/* show on hover for desktop */
+/* show only when .open is present (click-controlled) for desktop */
+@media (min-width: 1200px) {
+  .nav-item-locations.open .locations-menu {
+    display: block;
   }
-  
-  .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo & Brand */
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: serif;
-  }
-  
-  /* Menu */
+}
+
+/* Register Button */
+.register-btn {
+  background: white;
+  color: #1d3b53 !important;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.register-btn:hover {
+  background-color: #dbeafe;
+}
+
+/* Hamburger button */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: orange;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive — below 1200px show hamburger */
+@media (max-width: 1199px) {
   .navbar-menu {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    list-style: none;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-menu a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .navbar-menu a:hover {
-    color: #93c5fd;
-  }
-  
-  /* Register Button */
-  .register-btn {
-    background: white;
-    color: #1d3b53 !important;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    font-weight: 600;
-  }
-  
-  .register-btn:hover {
-    background-color: #dbeafe;
-  }
-  
-  /* Hamburger button */
-  .navbar-toggle {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1d3b53;
     flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    background: none;
-    border: none;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    display: none;
   }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: orange;
-    transition: all 0.3s ease;
+
+  /* mobile: make locations a collapsible panel inside the menu */
+  .nav-item-locations {
+    width: 100%;
   }
-  
-  .navbar-toggle.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+
+  .locations-toggle {
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 0.25rem 0;
   }
-  
-  .navbar-toggle.open .bar:nth-child(2) {
-    opacity: 0;
+
+  .nav-item-locations .locations-menu {
+    position: static;
+    background: transparent;
+    color: white;
+    padding: 0.5rem 0 0 0;
+    min-width: 0;
+    box-shadow: none;
+    display: none;
   }
-  
-  .navbar-toggle.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+
+  .nav-item-locations.open .locations-menu {
+    display: block;
   }
-  
-  /* Responsive — below 1200px show hamburger */
-  @media (max-width: 1199px) {
-    .navbar-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #1d3b53;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem 1.5rem;
-      gap: 1rem;
-      display: none;
-    }
-  
-    .navbar-menu.active {
-      display: flex;
-    }
-  
-    .navbar-toggle {
-      display: flex;
-    }
+
+  .locations-grid {
+    display: block;
   }
-  
-  /* Above 1200px show normal nav */
-  @media (min-width: 1200px) {
-    .navbar-menu {
-      display: flex !important;
-    }
+
+  .locations-col h4 {
+    color: #f1f5f9;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
   }
-  
+
+  .locations-col li a {
+    color: #93c5fd;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* Above 1200px show normal nav */
+@media (min-width: 1200px) {
+  .navbar-menu {
+    display: flex !important;
+  }
+}

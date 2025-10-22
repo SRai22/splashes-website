@@ -1,0 +1,63 @@
+[
+    {
+        "heading": "Orange County",
+        "items": [
+            "Anaheim Hills @ LA Fitness",
+            "Huntington Beach",
+            "Irvine",
+            "Yorba Linda @ LA Fitness"
+        ]
+    },
+    {
+        "heading": "San Gabriel Valley",
+        "items": [
+            "Alhambra-Fremont @ LA Fitness",
+            "Arcadia @ LA Fitness",
+            "Diamond Bar @ LA Fitness",
+            "Pasadena",
+            "West Covina @ LA Fitness"
+        ]
+    },
+    {
+        "heading": "Silicon Valley",
+        "items": [
+            "North San Jose @ City Sports Club",
+            "San Jose-Almaden @ City Sports Club",
+            "San Jose-Bascom",
+            "San Jose-Blossom Hill @ City Sports Club",
+            "Sunnyvale @ City Sports Club"
+        ]
+    },
+    {
+        "heading": "San Diego County",
+        "items": [
+            "Carlsbad",
+            "Poway @ LA Fitness"
+        ]
+    },
+    {
+        "heading": "Los Angeles County",
+        "items": [
+            "Culver City @ LA Fitness",
+            "Harbor City @ LA Fitness"
+        ]
+    },
+    {
+        "heading": "Alameda County",
+        "items": [
+            "Hayward @ City Sports Club"
+        ]
+    },
+    {
+        "heading": "San Francisco",
+        "items": [
+            "San Francisco-20th Avenue @ City Sports Club"
+        ]
+    },
+    {
+        "heading": "Denver",
+        "items": [
+            "Highlands Ranch"
+        ]
+    }
+]
