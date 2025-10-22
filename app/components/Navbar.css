@@ -65,7 +65,7 @@
 .locations-menu {
   position: absolute;
   top: 110%;
-  right: 50%;
+  right: 0;
   min-width: 680px;
   background: white;
   color: #1d3b53;
@@ -75,9 +75,18 @@
   display: none;
 }
 
+/* When locations dropdown is open, make the toggle have a white background */
+.nav-item-locations.open .locations-toggle {
+  background-color: white;
+  color: #1d3b53;
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
+}
+
 /* grid for columns inside dropdown */
 .locations-grid {
   display: grid;
+  background-color: white;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem 2rem;
 }
@@ -106,8 +115,6 @@
   text-decoration: underline;
 }
 
-/* show on hover for desktop */
-/* show only when .open is present (click-controlled) for desktop */
 @media (min-width: 1200px) {
   .nav-item-locations.open .locations-menu {
     display: block;
@@ -172,7 +179,6 @@
     display: none;
   }
 
-  /* mobile: make locations a collapsible panel inside the menu */
   .nav-item-locations {
     width: 100%;
   }
@@ -180,8 +186,7 @@
   .locations-toggle {
     width: 100%;
     text-align: left;
-    color: white;
-    padding: 0.25rem 0;
+    padding: 0.25rem 0 0 0;
   }
 
   .nav-item-locations .locations-menu {
@@ -203,13 +208,13 @@
   }
 
   .locations-col h4 {
-    color: #f1f5f9;
+    color: black;
     margin-top: 0.25rem;
     font-size: 0.95rem;
   }
 
   .locations-col li a {
-    color: #93c5fd;
+    color: #0ea5e9;
     padding-left: 0.5rem;
   }
 
