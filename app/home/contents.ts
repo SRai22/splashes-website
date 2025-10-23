@@ -32,7 +32,7 @@ export const TEACHING = {
   ],
   additionalText: `Select locations also offer additional swim programs such as swim competitions, swim teams, water aerobics, aquatic therapy, swim camps and more! To learn more about the Waterworks Family Swim School near you, select a location below.`,
   callToAction: "Ready to sign up?",
-  button: { label: "REGISTER NOW", href: "/register" },
+  button: { label: "REGISTER NOW", href: "/signin" },
   decoImageSrc: "/Images/home-hands-on-teaching.jpeg",     // the photo
   waveMaskSrc: "/Images/splash-wave.png",                  // used by CSS mask
 };

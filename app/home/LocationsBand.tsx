@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 type Props = {
@@ -10,6 +12,15 @@ type Props = {
 };
 
 export default function LocationsBand({ bg, map, heading, subheading, bodyCopy, button }: Props) {
+  const handleLocationClick = () => {
+    // Find and click the Locations button in the Navbar
+    const locationsButton = document.querySelector('.locations-toggle') as HTMLButtonElement;
+    if (locationsButton) {
+      locationsButton.click();
+      // Scroll to top to show the navbar dropdown
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
   return (
     <section className="relative isolate overflow-hidden">
       {/* Background pool photo (full-bleed) */}
@@ -57,13 +68,13 @@ export default function LocationsBand({ bg, map, heading, subheading, bodyCopy, 
             {bodyCopy}
           </p>
 
-          {/* Primary CTA pill button */}
-          <a
-            href={button.href}
-            className="mt-6 inline-block rounded-full bg-sky-600 hover:bg-sky-500 text-white px-6 py-2 font-semibold shadow transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          {/* Primary CTA pill button - triggers Navbar locations */}
+          <button
+            onClick={handleLocationClick}
+            className="mt-6 inline-block rounded-full bg-sky-600 hover:bg-sky-500 text-white px-6 py-2 font-semibold shadow transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 cursor-pointer"
           >
             {button.label}
-          </a>
+          </button>
         </div>
       </div>
     </section>
