@@ -133,7 +133,8 @@
     padding: 3rem 2rem;
   }
   .contentBox {
-    padding: 3rem;
+    background: rgba(255, 255, 255, 1);
+    padding: 1rem;
   }
   .heading {
     font-size: 3rem;
@@ -147,6 +148,11 @@
   .contentContainer {
     margin-left: 5rem;
     padding: 4rem 3rem;
+  }
+  .contentBox {
+    background: rgba(255, 255, 255, 0);
+    padding: 3.5rem;
+    max-width: 650px;
   }
   .heading {
     font-size: 3.5rem;
