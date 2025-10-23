@@ -1,4 +1,5 @@
-// app/adultprograms/page.tsx 
+// app/adultprograms/page.tsx
+// author - Md Rakeen Murtaza, m.murtaza.4942@westcliff.edu
 import React from "react";
 import BrandFooter from "@/app/components/BrandFooter";
 import "./adultprograms.css";
