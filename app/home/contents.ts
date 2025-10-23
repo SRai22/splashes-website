@@ -40,8 +40,9 @@ export const TEACHING = {
 export const LOCATIONS = {
   bg: "/Images/home-our-locations-bg.jpeg",
   map: "/Images/home-our-locations-map.png",
-  heading: "Find a Splashes Swim School near you",
-  subheading: "Family Swim School Locations",
+  heading: "Find a Splashes\nSwim School\nnear you",
+  subheading: "Family Swim School\nLocations",
+  bodyCopy: "Splashes offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.",
   button: { label: "Find a Location Near You", href: "/locations" },
 };
 
