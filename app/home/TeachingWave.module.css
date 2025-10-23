@@ -1,19 +1,159 @@
-/* Wave mask only appears at >=1200px; keeps DOM tiny on mobile */
-.waveWrap {
-  position: absolute;
-  right: -6%;
-  bottom: -12%;
-  width: min(38vw, 520px);
-  height: auto;
+/* Teaching section with background image and text overlay */
+.teachingSection {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
 }
-.waveMask {
-  -webkit-mask-image: url("/Images/splash-wave.png");
-  mask-image: url("/Images/splash-wave.png");
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
-@media (max-width: 1199px) {
-  .waveWrap { display: none; }
+
+.contentContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  margin-left: 2rem;
+  padding: 2rem 1rem;
+}
+
+/* Typography Styles */
+
+/* Heading - Bodoni Moda Bold */
+.heading {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+/* Body Text - Open Sans Regular */
+.bodyText {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-top: 1rem;
+}
+
+/* Subheading - Open Sans Bold */
+.subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+  margin-top: 1.5rem;
+}
+
+/* List Items - Open Sans Regular */
+.listItem {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.link {
+  color: #0369a1;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Additional Text - Open Sans Regular */
+.additionalText {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-top: 1.5rem;
+}
+
+/* Call to Action - Open Sans Regular */
+.callToAction {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1e293b;
+  margin-top: 1.5rem;
+}
+
+/* Register Button - Open Sans Semibold */
+.registerButton {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: #0369a1;
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.registerButton:hover {
+  background-color: #0284c7;
+}
+
+.registerButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.5);
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .teachingSection {
+    min-height: 600px;
+  }
+  .contentContainer {
+    margin-left: 3rem;
+    padding: 3rem 2rem;
+  }
+  .contentBox {
+    padding: 3rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .teachingSection {
+    min-height: 700px;
+  }
+  .contentContainer {
+    margin-left: 5rem;
+    padding: 4rem 3rem;
+  }
+  .contentBox {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 3.5rem;
+    max-width: 650px;
+  }
+  .heading {
+    font-size: 3.5rem;
+  }
 }

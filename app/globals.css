@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'Open_Sans';
-  src: url('/Fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
+  src: url('/Fonts/open-sans/Open Sans Bold Italic.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
+  font-style: italic;
 }
 
 :root {
